@@ -42,6 +42,7 @@ const Login = () => {
       {userLoggedIn && <Navigate to={"/dashboard"} replace={true} />}
       <main className="w-full mt-12 md:mt-0  overflow-y-auto flex items-center md:justify-between justify-center">
         <SignBar />
+        {/* <Navigation /> */}
         <div className="flex justify-center md:w-[50%]  items-center bg-white">
           <div className=" text-gray-600 space-y-5 ">
             <div className="">

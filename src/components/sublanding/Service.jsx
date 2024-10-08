@@ -31,7 +31,7 @@ const AnimatedSection = () => {
   return (
     <section ref={sectionRef} className="md:px-32 md:py-12 px-6 py-4">
       {/* Statistics Row */}
-      <div className="flex items-center gap-4 justify-between md:py-12 py-4 ">
+      <div className="flex items-center gap-4 justify-between md:py-12 pt-8 pb-4 ">
         <div>
           <h1 className="md:text-5xl text-2xl font-bold">1.5M</h1>
           <p className="md:text-lg text-sm">New visitors every month.</p>

@@ -9,8 +9,8 @@ import Landing from "../components/home/Landing";
 const RootLayout = () => {
   const location = useLocation(); // Get the current location
   const noHeaderRoutes = [
-    "/login",
-    "/register",
+    // "/login",
+    // "/register",
     "/dashboard",
     "/setting",
     "/wallet",

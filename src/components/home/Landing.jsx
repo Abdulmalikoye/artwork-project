@@ -20,7 +20,7 @@ import Footer from "../sublanding/Footer";
 const Landing = () => {
   return (
     <div className=" ">
-      <section className="md:px-32 md:py-12 px-6 py-4 bg-[#1E2238]">
+      <section className="md:px-32 h-screen md:h-auto overflow-hidden md:py-12 px-6 py-0 bg-[#1E2238] flex flex-col gap-8 items-center justify-center">
         <div className="flex flex-col items-center justify-center md:gap-8 gap-2 md:py-12 py-6">
           <h1 className="text-white font-bold md:text-7xl text-3xl text-center md:w-[90%] animate__animated animate__fadeInDown">
             Discover
@@ -57,19 +57,21 @@ const Landing = () => {
           </Link>
         </div>
 
-        <div className="container mt-8">
+        <div className="container h-[50%]  mt-8">
           <div className="  ">
             <img
               src={heroImg1}
               alt=""
               //   className=" transition-transform duration-300 ease-in-out"
+              className="h-full md:block hidden"
             />
           </div>
           <div className="  ">
             <img
               src={heroImg2}
               alt=""
-              className=" z-10 transition-all duration-300 ease-in-out hover:mx-1  "
+              // className=" z-10 transition-all duration-300 ease-in-out hover:mx-1  "
+              className="h-[500px] md:auto animate__animated animate__fadeIn"
             />
           </div>
           <div className="  z-0">
@@ -77,6 +79,7 @@ const Landing = () => {
               src={heroImg3}
               alt=""
               //   className=" transition-all duration-300 ease-in-out "
+              className="md:block hidden"
             />
           </div>
         </div>

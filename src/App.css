@@ -425,3 +425,7 @@ html {
 .animate__animated.animate__slideInRight {
   --animate-duration: 400ms;
 }
+.animate__animated.animate__fadeIn {
+  /* --animate-duration: 800ms; */
+  --animate-delay: 3s;
+}
