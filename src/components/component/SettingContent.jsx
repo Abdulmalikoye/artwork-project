@@ -1,6 +1,12 @@
 import React from "react";
+import { useAuth } from "../../contexts/authContext";
+import { useNavigate } from "react-router-dom";
+import { doSignOut } from "../../firebase/auth";
 
 const SettingContent = () => {
+  const navigate = useNavigate();
+  const { userLoggedIn } = useAuth();
+  const { currentUser } = useAuth();
   return (
     <div className="bg-white rounded-lg min-h-screen min-w-screen  px-8  w-full">
       {/* Header */}
@@ -70,9 +76,28 @@ const SettingContent = () => {
         administrative emails, such as password resets.
       </p>
       <p className="mt-4 text-gray-700">
-        We will use this email address:{" "}
-        <span className="text-black font-medium">maleek@gmail.com</span>
+        We will use this email address:
+        <span className="text-black font-medium">
+          {currentUser.displayName
+            ? currentUser.displayName
+            : currentUser.email}
+        </span>
       </p>
+      <div className="mt-4">
+        <h1 className="text-2xl text-red-600">Danger Zone</h1>
+        {userLoggedIn && (
+          <button
+            onClick={() => {
+              doSignOut().then(() => {
+                navigate("/login");
+              });
+            }}
+            className="text-sm mt-2 text-black  px-6 py-3 rounded-sm border-2 border-red-600 bg-red-100"
+          >
+            Logout
+          </button>
+        )}
+      </div>
     </div>
   );
 };

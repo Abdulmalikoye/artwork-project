@@ -13,12 +13,12 @@ const Listing = ({ isOpen, onClose, onMenuClick }) => {
         <Sidebar isOpen={isOpen} onClose={onClose} />
       </div>
       <div
-        className={`flex flex-col w-full 
+        className={`flex flex-col md:w-full w-[400px]
           ${isOpen ? "md:ml-0 ml-0 " : "md:ml-0 ml-[-225px] "} `}
       >
         <NavHead onMenuClick={onMenuClick} isOpen={isOpen} />
         <FilterComponent />
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mx-8 w-full ">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 w-full ">
           <ArtCard />
           <ArtCard />
           <ArtCard />

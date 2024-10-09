@@ -5,13 +5,16 @@ import Sidebar from "../components/component/Sidebar";
 import NavHead from "../components/component/NavHead";
 import MainHow from "../components/component/MainHow";
 
-const TroubleShooting = () => {
+const TroubleShooting = ({ isOpen }) => {
   return (
     <div className="flex ">
       <div className="">
         <Sidebar />
       </div>
-      <div className="flex flex-col w-full ">
+      <div
+        className={`flex flex-col w-full 
+          ${isOpen ? "md:ml-0 ml-0 " : "md:ml-0 ml-[-225px] "} `}
+      >
         <NavHead />
         <BreadCrumbs />
         <Outlet />

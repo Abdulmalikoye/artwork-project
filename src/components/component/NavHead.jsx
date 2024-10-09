@@ -15,6 +15,9 @@ const NavHead = ({ onMenuClick, sidebarOpen }) => {
   const togglePopup = () => {
     setIsopen(!isOpen);
   };
+  const closePopup = () => {
+    setIsopen(false);
+  };
 
   return (
     <>
@@ -24,7 +27,9 @@ const NavHead = ({ onMenuClick, sidebarOpen }) => {
         {currentUser.displayName ? currentUser.displayName : currentUser.email},
         you are now logged in. */}
           <button
-            className={` ${isOpen ? "hidden" : "p-2 text-gray-600 md:hidden"}`} // Hide button on desktop
+            className={` ${
+              sidebarOpen ? "hidden" : "p-2 text-gray-600 md:hidden"
+            }`} // Hide button on desktop
             onClick={onMenuClick}
           >
             <ion-icon name="menu-outline"></ion-icon>
@@ -50,7 +55,7 @@ const NavHead = ({ onMenuClick, sidebarOpen }) => {
           <div className="bg-white rounded-lg p-5 shadow-lg">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Profile</h2>
-              <button onClick={togglePopup} className="text-gray-500">
+              <button onClick={closePopup} className="text-gray-500">
                 &times;
               </button>
             </div>

@@ -181,7 +181,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="md:px-32 md:py-12 px-6 py-4 relative bg-[#E5E8FF]">
+      <section className="md:px-32 md:py-12 px-6 py-12 mt-5 relative bg-[#E5E8FF]">
         <img
           src={shape}
           alt=""
@@ -206,11 +206,11 @@ const Landing = () => {
             See more works
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 pt-4">
           <div>
             <img src={imgOpp1} alt="" />
-            <div className="flex flex-col gap-4 mb-3">
-              <h1 className="font-bold text-[32px]">
+            <div className="flex flex-col gap-4 mb-3 mt">
+              <h1 className="font-bold md:text-3xl text-2xl mt-3">
                 Evaluating Investment Potential.
               </h1>
               <p>
@@ -218,12 +218,14 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button>Learn more &darr</button>
+            <button className="flex gap-2 items-center justify-center">
+              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
           </div>
           <div>
             <img src={imgOpp2} alt="" />
-            <div className="flex flex-col gap-4 mb-3">
-              <h1 className="font-bold text-[32px]">
+            <div className="flex flex-col gap-4 mb-3 mt-3">
+              <h1 className="font-bold md:text-3xl text-2xl">
                 Evaluating Investment Potential.
               </h1>
               <p>
@@ -231,12 +233,14 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button>Learn more &darr</button>
+            <button className="flex gap-2 items-center justify-center">
+              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
           </div>
           <div>
             <img src={imgOpp3} alt="" />
-            <div className="flex flex-col gap-4 mb-3">
-              <h1 className="font-bold text-[32px]">
+            <div className="flex flex-col gap-4 mb-3 mt-3">
+              <h1 className="font-bold md:text-3xl text-2xl">
                 Evaluating Investment Potential.
               </h1>
               <p>
@@ -244,12 +248,14 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button>Learn more &darr</button>
+            <button className="flex gap-2 items-center justify-center">
+              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
           </div>
           <div>
             <img src={imgOpp4} alt="" />
-            <div className="flex flex-col gap-4 mb-3">
-              <h1 className="font-bold text-[32px]">
+            <div className="flex flex-col gap-4 mb-3 mt-3">
+              <h1 className="font-bold md:text-3xl text-2xl">
                 Evaluating Investment Potential.
               </h1>
               <p>
@@ -257,7 +263,9 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button>Learn more &darr</button>
+            <button className="flex gap-2 items-center justify-center">
+              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
           </div>
         </div>
       </section>
