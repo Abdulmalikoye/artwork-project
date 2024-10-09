@@ -20,4 +20,4 @@ const TroubleShooting = () => {
   );
 };
 
-export default <Trou></Trou>;
+export default TroubleShooting;

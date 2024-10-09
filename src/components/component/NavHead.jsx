@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { doSignOut } from "../../firebase/auth";
 import Navigation from "../header/Navigation";
 
-const NavHead = () => {
+const NavHead = ({ onMenuClick, sidebarOpen }) => {
   const navigate = useNavigate();
   const { userLoggedIn } = useAuth();
   const { currentUser } = useAuth();
@@ -19,10 +19,16 @@ const NavHead = () => {
   return (
     <>
       <header className="w-full bg-white flex justify-between items-center relative p-8">
-        <div className="text-2xl font-bold ">
+        <div className="flex gap-2 ">
           {/* Hello
         {currentUser.displayName ? currentUser.displayName : currentUser.email},
         you are now logged in. */}
+          <button
+            className={` ${isOpen ? "hidden" : "p-2 text-gray-600 md:hidden"}`} // Hide button on desktop
+            onClick={onMenuClick}
+          >
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
           <SearchBar />
         </div>
 

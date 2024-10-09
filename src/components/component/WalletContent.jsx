@@ -3,14 +3,15 @@ import profileimg from "../../img/profileimg.png";
 
 const WalletContent = () => {
   return (
-    <div className="p-8 bg-white min-h-screen flex justify-between  gap-8">
+    <div className="p-8 bg-white min-h-screen flex md:flex-row flex-col justify-between  gap-8">
       {/* Wallet Summary Section */}
       <div className="w-[70%] flex flex-col gap-10">
         <section>
           <h2 className="text-3xl font-bold mb-6">Wallet</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {/* Total Spending Card */}
-            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col">
+
+            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col md:w-full w-[340px]">
               <span className="text-sm text-gray-500">Total Spending</span>
               <span className="text-2xl font-bold mt-2">$432,215.32</span>
               <span className="text-sm text-green-500 mt-1">
@@ -19,7 +20,7 @@ const WalletContent = () => {
             </div>
 
             {/* Total Income Card */}
-            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col">
+            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col w-full">
               <span className="text-sm text-gray-500">Total Income</span>
               <span className="text-2xl font-bold mt-2">$21,579.22</span>
               <span className="text-sm text-red-500 mt-1">
@@ -28,7 +29,7 @@ const WalletContent = () => {
             </div>
 
             {/* Total Savings Card */}
-            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col">
+            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col w-full">
               <span className="text-sm text-gray-500">Total Saving</span>
               <span className="text-2xl font-bold mt-2">$68,483.16</span>
               <span className="text-sm text-green-500 mt-1">
@@ -39,14 +40,14 @@ const WalletContent = () => {
         </section>
 
         {/* Recent Activity Section */}
-        <section className="">
+        <section className=" ">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-semibold">Recent Activity</h2>
             <a href="#!" className="text-blue-600 text-sm">
               View All
             </a>
           </div>
-          <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm overflow-x-auto">
+          <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm overflow-x-auto w-full">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-white text-gray-600 text-left">

@@ -5,14 +5,14 @@ import Sidebar from "../components/component/Sidebar";
 import NavHead from "../components/component/NavHead";
 import MainHow from "../components/component/MainHow";
 
-const HelpLayout = () => {
+const HelpLayout = ({ isOpen, onClose, onMenuClick }) => {
   return (
     <div className="flex ">
       <div className="">
-        <Sidebar />
+        <Sidebar isOpen={isOpen} onClose={onClose} />
       </div>
       <div className="flex flex-col w-full ">
-        <NavHead />
+        <NavHead onMenuClick={onMenuClick} isOpen={isOpen} />
         <BreadCrumbs />
         <Outlet />
       </div>

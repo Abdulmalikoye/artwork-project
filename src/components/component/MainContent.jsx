@@ -25,7 +25,7 @@ const MainContent = () => {
         </div>
       </div>
       <FilterComponent />
-      <div className="grid grid-cols-3 gap-8 mx-8">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mx-8">
         <ArtCard />
         <ArtCard />
         <ArtCard />

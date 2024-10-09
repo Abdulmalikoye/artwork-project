@@ -12,14 +12,19 @@ const SearchBar = ({ placeholder, onSearch }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <input
         type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
-        placeholder={placeholder || "Search..."}
+        placeholder="Search..."
+        className="border rounded-full py-2 pl-10 pr-4 w-full md:flex hidden"
       />
+      <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+        {/* Search Icon */}
+        <ion-icon
+          name="search-outline"
+          className="md:p-0 p-4 md:rounded-none rounded-full bg-white md:border-none border-2 border-[#F3F3F3]"
+        ></ion-icon>
+      </span>
     </div>
   );
 };

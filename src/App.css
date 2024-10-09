@@ -429,3 +429,9 @@ html {
   /* --animate-duration: 800ms; */
   --animate-delay: 3s;
 }
+.animate__animated.animate__slideInLeft {
+  --animate-duration: 4ms;
+}
+.animate__animated.animate__slideOutLeft {
+  --animate-duration: 4ms;
+}

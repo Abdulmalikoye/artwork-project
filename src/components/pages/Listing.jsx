@@ -6,16 +6,19 @@ import MainContent from "../component/MainContent";
 import FilterComponent from "../component/FilterComponent";
 import ArtCard from "../component/ArtCard";
 
-const Listing = () => {
+const Listing = ({ isOpen, onClose, onMenuClick }) => {
   return (
-    <div className="flex ">
+    <div className="flex w-full ">
       <div className="">
-        <Sidebar />
+        <Sidebar isOpen={isOpen} onClose={onClose} />
       </div>
-      <div className="flex flex-col w-full ">
-        <NavHead />
+      <div
+        className={`flex flex-col w-full 
+          ${isOpen ? "md:ml-0 ml-0 " : "md:ml-0 ml-[-225px] "} `}
+      >
+        <NavHead onMenuClick={onMenuClick} isOpen={isOpen} />
         <FilterComponent />
-        <div className="grid grid-cols-3 gap-8 p-8 ">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mx-8 w-full ">
           <ArtCard />
           <ArtCard />
           <ArtCard />
