@@ -3,6 +3,7 @@ import { Navigate, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../contexts/authContext";
 import { doCreateUserWithEmailAndPassword } from "../../../firebase/auth";
 import SignBar from "../login/SignBar";
+import NavigationLog from "../NavigationLog";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ const Register = () => {
 
   return (
     <div>
+      <NavigationLog />
       {userLoggedIn && <Navigate to={"/dashboard"} replace={true} />}
 
       <main className="w-full mt-12 md:mt-0 overflow-y-auto flex items-center md:justify-between justify-center">

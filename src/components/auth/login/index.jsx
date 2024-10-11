@@ -9,6 +9,7 @@ import reactangleImg from "./../../../../src/img/Rectangle.svg";
 import artlogo from "./../../../../src/img/artlab-logo.svg";
 
 import SignBar from "./SignBar";
+import NavigationLog from "../NavigationLog";
 
 const Login = () => {
   const { userLoggedIn } = useAuth();
@@ -61,6 +62,7 @@ const Login = () => {
 
   return (
     <div className="">
+      <NavigationLog />
       {userLoggedIn && <Navigate to={"/dashboard"} replace={true} />}
       <main className="w-full mt-12 md:mt-0  overflow-y-auto flex items-center md:justify-between justify-center">
         <SignBar />
