@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ArtCard from "./ArtCard";
 import dashboardImg from "../../img/dashboardimg.svg";
 import FilterComponent from "./FilterComponent";
+import AddUser from "./AddUser";
 
 const MainContent = () => {
+  const [popup, setPopup] = useState(false);
+
+  const handlePopup = () => {
+    return setPopup(true);
+  };
+  const closePopup = () => {
+    return setPopup(false);
+  };
   return (
     <main className=" ">
       <div className="dash-img p-10 rounded-lg mx-8 mb-8 ">
@@ -24,7 +33,16 @@ const MainContent = () => {
           </button>
         </div>
       </div>
-      <FilterComponent />
+      <div className="flex items-center justify-between gap-12 px-8 w-full">
+        <FilterComponent handlePopup={handlePopup} />
+        <button
+          className="border border-gray-400 px-4 py-2 rounded"
+          onClick={handlePopup}
+        >
+          New Art
+        </button>
+        {popup && <AddUser closePopup={closePopup} />}
+      </div>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mx-8">
         <ArtCard />
         <ArtCard />

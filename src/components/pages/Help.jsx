@@ -8,7 +8,7 @@ import BreadCrumbs from "../component/BreadCrumbs";
 
 const Help = () => {
   return (
-    <div className=" sm:w-[360px] ">
+    <div className=" flex ">
       <MainHow />
     </div>
   );

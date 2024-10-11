@@ -12,7 +12,7 @@ const HelpLayout = ({ isOpen, onClose, onMenuClick }) => {
         <Sidebar isOpen={isOpen} onClose={onClose} />
       </div>
       <div
-        className={`flex flex-col w-full sm:w-[360px] 
+        className={`flex flex-col w-full 
           ${isOpen ? "md:ml-0 ml-0 " : "md:ml-0 ml-[-225px] "} `}
       >
         <NavHead onMenuClick={onMenuClick} isOpen={isOpen} />

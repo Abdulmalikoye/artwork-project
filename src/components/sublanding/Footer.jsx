@@ -3,7 +3,7 @@ import artGallery from "../../img/artgallery.svg";
 
 const Footer = () => {
   return (
-    <section className="bg-[#1E2238]  md:px-32 py-12 px-6  min-h-screen flex flex-col justify-center items-center text-white">
+    <section className="bg-[#1E2238]  md:px-32 px-6  flex flex-col justify-center items-center text-white">
       <div className="w-full max-w-5xl md:px-32 md:py-12 px-6">
         <div className="text-center mb-8">
           <p className="md:text-lg text-xs mb-4">NEWSLETTER</p>

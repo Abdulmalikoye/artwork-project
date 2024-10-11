@@ -10,6 +10,7 @@ export function useAuth() {
 }
 
 export function AuthProvider({ children }) {
+  // const [signed, setSigned]= useState(false)
   const [currentUser, setCurrentUser] = useState(null);
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [isEmailUser, setIsEmailUser] = useState(false);
@@ -23,8 +24,9 @@ export function AuthProvider({ children }) {
 
   async function initializeUser(user) {
     if (user) {
-
       setCurrentUser({ ...user });
+      setUserLoggedIn(true);
+      // setSigned(true)
 
       // check if provider is email and password login
       const isEmail = user.providerData.some(
@@ -33,10 +35,10 @@ export function AuthProvider({ children }) {
       setIsEmailUser(isEmail);
 
       // check if the auth provider is google or not
-    //   const isGoogle = user.providerData.some(
-    //     (provider) => provider.providerId === GoogleAuthProvider.PROVIDER_ID
-    //   );
-    //   setIsGoogleUser(isGoogle);
+      //   const isGoogle = user.providerData.some(
+      //     (provider) => provider.providerId === GoogleAuthProvider.PROVIDER_ID
+      //   );
+      //   setIsGoogleUser(isGoogle);
 
       setUserLoggedIn(true);
     } else {
@@ -52,7 +54,7 @@ export function AuthProvider({ children }) {
     isEmailUser,
     isGoogleUser,
     currentUser,
-    setCurrentUser
+    setCurrentUser,
   };
 
   return (

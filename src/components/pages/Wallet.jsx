@@ -7,7 +7,7 @@ import WalletContent from "../component/WalletContent";
 
 const Wallet = ({ isOpen, onClose, onMenuClick }) => {
   return (
-    <div className="flex ">
+    <div className="flex w-full">
       <div className="">
         <Sidebar isOpen={isOpen} onClose={onClose} />
       </div>

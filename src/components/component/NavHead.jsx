@@ -63,15 +63,18 @@ const NavHead = ({ onMenuClick, sidebarOpen }) => {
               <img
                 src={profileImg}
                 alt="Profile"
-                className=" h-10 rounded-full mx-auto"
+                className="h-10 rounded-full mx-auto"
               />
-
+              {/* Check if currentUser exists before accessing email */}
               <p className="text-center">
-                {currentUser.displayName
-                  ? currentUser.displayName
-                  : currentUser.email}
+                {currentUser
+                  ? currentUser.email
+                    ? currentUser.email
+                    : ""
+                  : "No user logged in"}
               </p>
             </div>
+
             <div className="mt-4 flex justify-center">
               {userLoggedIn ? (
                 <>

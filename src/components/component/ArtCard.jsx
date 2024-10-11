@@ -3,7 +3,7 @@ import artCard from "../../img/artcard.svg";
 
 const ArtCard = () => {
   return (
-    <div className=" p-4 rounded-lg art-card">
+    <div className=" p-4 rounded-lg art-card md:hover:border-2 md:hover:border-blue-500 border-transparent mt-6">
       <img src={artCard} alt="" className="w-full rounded-lg mb-4" />
 
       <h2 className="text-xl font-semibold my-2">NFT Title</h2>

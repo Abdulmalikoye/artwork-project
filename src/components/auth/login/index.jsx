@@ -22,18 +22,40 @@ const Login = () => {
     e.preventDefault();
     if (!isSigningIn) {
       setIsSigningIn(true);
-      await doSignInWithEmailAndPassword(email, password);
+      setErrorMessage("");
+      try {
+        await doSignInWithEmailAndPassword(email, password);
+      } catch (error) {
+        if (error.code === "auth/user-not-found") {
+          setErrorMessage("No user found with this email address.");
+        } else {
+          setErrorMessage("An error occurred during sign in: " + error.message);
+        }
+        console.error("Sign in error:", error);
+      } finally {
+        setIsSigningIn(false);
+      }
+
       // doSendEmailVerification()
     }
   };
 
-  const onGoogleSignIn = (e) => {
+  const onGoogleSignIn = async (e) => {
+    // Make the function async
     e.preventDefault();
     if (!isSigningIn) {
       setIsSigningIn(true);
-      doSignInWithGoogle().catch((err) => {
-        setIsSigningIn(false);
-      });
+      setErrorMessage("");
+
+      try {
+        await doSignInWithGoogle(); // Await the sign-in process
+      } catch (error) {
+        if (error.code) {
+          setErrorMessage("Invalid login credentials. Please try again");
+        }
+      } finally {
+        setIsSigningIn(false); // Reset the signing-in state after the process
+      }
     }
   };
 
@@ -53,6 +75,16 @@ const Login = () => {
               </div>
             </div>
             <form onSubmit={onSubmit} className="space-y-5">
+              {errorMessage && (
+                <div
+                  className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded "
+                  role="alert"
+                >
+                  <span className="block sm:inline">
+                    Invalid login credentials. Please try again
+                  </span>
+                </div>
+              )}
               <div>
                 <label className="text-sm text-gray-600 font-bold">Email</label>
                 <input
@@ -83,9 +115,9 @@ const Login = () => {
                 />
               </div>
 
-              {errorMessage && (
+              {/* {errorMessage && (
                 <span className="text-red-600 font-bold">{errorMessage}</span>
-              )}
+              )} */}
 
               <button
                 type="submit"

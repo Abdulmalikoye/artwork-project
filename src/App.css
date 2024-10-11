@@ -27,9 +27,9 @@ html {
   border: 1.5px solid #ffffff;
 }
 
-.art-card:hover {
+/* .art-card:hover {
   border: 1.5px solid #1677ff;
-}
+} */
 .dash-img {
   background-image: linear-gradient(
       to right bottom,
@@ -430,8 +430,82 @@ html {
   --animate-delay: 3s;
 }
 .animate__animated.animate__slideInLeft {
-  --animate-duration: 4ms;
+  --animate-duration: 400ms;
 }
 .animate__animated.animate__slideOutLeft {
   --animate-duration: 4ms;
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+.learn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.learn {
+  --primary-color: #111;
+  --hovered-color: #6271eb;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.learn p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.learn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.learn p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.learn:hover::after {
+  width: 100%;
+}
+
+.learn:hover p::before {
+  width: 100%;
+}
+
+.learn:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+.learn:hover p {
+  /* transform: translateX(4px); */
+  color: var(--hovered-color);
+}
+
+.learn svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
 }

@@ -12,7 +12,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center  px-6 md:px-32 py-5 bg-[#1E2238] text-white">
+    <nav className="flex justify-between  items-center  px-6 md:px-32 py-5 bg-[#1E2238] text-white">
       {/* Logo */}
       <Link
         to="/"

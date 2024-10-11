@@ -78,9 +78,11 @@ const SettingContent = () => {
       <p className="mt-4 text-gray-700">
         We will use this email address:
         <span className="text-black font-medium">
-          {currentUser.displayName
-            ? currentUser.displayName
-            : currentUser.email}
+          {currentUser
+            ? currentUser.email
+              ? currentUser.email
+              : ""
+            : "No user logged in"}
         </span>
       </p>
       <div className="mt-4">

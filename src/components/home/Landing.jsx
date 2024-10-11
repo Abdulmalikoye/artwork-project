@@ -206,20 +206,34 @@ const Landing = () => {
             See more works
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 pt-4">
-          <div>
+        <div className="grid md:grid-cols-2 gap-8 pt-4 justify-center">
+          <div className="w-[90%]">
             <img src={imgOpp1} alt="" />
             <div className="flex flex-col gap-4 mb-3 mt">
               <h1 className="font-bold md:text-3xl text-2xl mt-3">
                 Evaluating Investment Potential.
               </h1>
-              <p>
+              <p className="w-full">
                 Conducting Comprehensive ROI Analysis and Projections for
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button className="flex gap-2 items-center justify-center">
-              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            <button className="learn">
+              <p>Learn more</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
             </button>
           </div>
           <div>
@@ -233,8 +247,22 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button className="flex gap-2 items-center justify-center">
-              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            <button className="learn">
+              <p>Learn more</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
             </button>
           </div>
           <div>
@@ -248,8 +276,22 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button className="flex gap-2 items-center justify-center">
-              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            <button className="learn">
+              <p>Learn more</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
             </button>
           </div>
           <div>
@@ -263,8 +305,22 @@ const Landing = () => {
                 Various Investment Options to Maximize Returns.
               </p>
             </div>
-            <button className="flex gap-2 items-center justify-center">
-              Learn more <ion-icon name="arrow-forward-outline"></ion-icon>
+            <button className="learn">
+              <p>Learn more</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
             </button>
           </div>
         </div>

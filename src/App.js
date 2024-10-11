@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Login from "./components/auth/login";
 import Register from "./components/auth/register";
 import Header from "./components/header";
 import Dashboard from "./components/pages";
-import { AuthProvider } from "./contexts/authContext";
+import { AuthProvider, useAuth } from "./contexts/authContext";
 import Navigation from "./components/header/Navigation";
 import "./App.css";
 import Pricing from "./components/home/Pricing";
@@ -17,12 +17,16 @@ import Help from "./components/pages/Help";
 import TroubleShootingPage from "./components/pages/TroubleShootingPage";
 import RootLayout from "./layout/RootLayout";
 import HelpLayout from "./layout/HelpLayout";
+import Error404 from "./components/home/Error404";
 
 const App = () => {
-  // Define routes where you want to hide the header
-  // State that controls the visibility of the Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  // const currentUser = false;
+  const RequireAuth = ({ children }) => {
+    const { userLoggedIn } = useAuth();
+    console.log("User logged in:", userLoggedIn);
+    return userLoggedIn ? children : <Navigate to="/login" />;
+  };
   // Function to toggle sidebar visibility
   const handleMenuClick = () => {
     setSidebarOpen(!sidebarOpen);
@@ -40,46 +44,55 @@ const App = () => {
         <Routes>
           <Route path="/" element={<RootLayout />}>
             <Route path="" element={<Landing />} />
+            <Route path="*" element={<Error404 />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route
               path="dashboard"
               element={
-                <Dashboard
-                  isOpen={sidebarOpen}
-                  onClose={handleCloseSidebar}
-                  onMenuClick={handleMenuClick}
-                />
+                <RequireAuth>
+                  <Dashboard
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
               }
             />
             <Route
               path="listing"
               element={
-                <Listing
-                  isOpen={sidebarOpen}
-                  onClose={handleCloseSidebar}
-                  onMenuClick={handleMenuClick}
-                />
+                <RequireAuth>
+                  <Listing
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
               }
             />
             <Route
               path="wallet"
               element={
-                <Wallet
-                  isOpen={sidebarOpen}
-                  onClose={handleCloseSidebar}
-                  onMenuClick={handleMenuClick}
-                />
+                <RequireAuth>
+                  <Wallet
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
               }
             />
             <Route
               path="setting"
               element={
-                <Setting
-                  isOpen={sidebarOpen}
-                  onClose={handleCloseSidebar}
-                  onMenuClick={handleMenuClick}
-                />
+                <RequireAuth>
+                  <Setting
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
               }
             />
             <Route path="pricing" element={<Pricing />}>
@@ -89,11 +102,13 @@ const App = () => {
             <Route
               path="help"
               element={
-                <HelpLayout
-                  isOpen={sidebarOpen}
-                  onClose={handleCloseSidebar}
-                  onMenuClick={handleMenuClick}
-                />
+                <RequireAuth>
+                  <HelpLayout
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
               }
             >
               <Route path="" element={<Help />} />

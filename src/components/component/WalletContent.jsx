@@ -3,15 +3,15 @@ import profileimg from "../../img/profileimg.png";
 
 const WalletContent = () => {
   return (
-    <div className="p-8 bg-white min-h-screen flex md:flex-row flex-col justify-between  gap-8">
+    <div className="w-full p-8 bg-white min-h-screen flex md:flex-row flex-col justify-between  gap-8">
       {/* Wallet Summary Section */}
-      <div className="w-[70%] flex flex-col gap-10">
+      <div className="md:w-[70%] flex flex-col gap-10">
         <section>
           <h2 className="text-3xl font-bold mb-6">Wallet</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
             {/* Total Spending Card */}
 
-            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col md:w-full w-[340px]">
+            <div className="bg-white border border-[#F3F3F3] p-6 rounded-lg shadow-sm flex flex-col md:w-full ">
               <span className="text-sm text-gray-500">Total Spending</span>
               <span className="text-2xl font-bold mt-2">$432,215.32</span>
               <span className="text-sm text-green-500 mt-1">
@@ -165,7 +165,7 @@ const WalletContent = () => {
       </div>
 
       {/* Wallet Details and Transaction History Section */}
-      <section className="flex flex-col gap-6 w-[30%]">
+      <section className="flex flex-col gap-6 md:w-[30%]">
         {/* Wallet Card */}
         <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col space-y-4 lg:col-span-1">
           <h3 className="text-lg font-semibold">Wallet</h3>
