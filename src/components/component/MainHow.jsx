@@ -43,30 +43,37 @@ const articles = [
 
 function MainHow() {
   return (
-    <div className="p-8 bg-white w-full">
-      <h1 className="text-3xl font-bold mb-6">How it works</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center  gap-8">
-        {articles.map((section, index) => (
-          <div key={index} className="p-6 bg-[#EBF0F0] rounded-3xl">
-            <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
-            <div className=" flex flex-col space-y-2">
-              {section.links.map((link, linkIndex) => (
-                <Link
-                  to="troubleshooting"
-                  key={linkIndex}
-                  className="text-blue-600 hover:underline cursor-pointer"
+    <>
+      <div className="flex  w-full">
+        <div className="p-8 bg-white">
+          <h1 className="text-3xl font-bold mb-6">How it works</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center  gap-8">
+            {articles.map((section, index) => (
+              <div key={index} className="p-6 bg-[#EBF0F0] rounded-3xl">
+                <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
+                <div className=" flex flex-col space-y-2">
+                  {section.links.map((link, linkIndex) => (
+                    <Link
+                      to="troubleshooting"
+                      key={linkIndex}
+                      className="text-blue-600 hover:underline cursor-pointer"
+                    >
+                      {link}
+                    </Link>
+                  ))}
+                </div>
+                <a
+                  href="#"
+                  className="block mt-4 text-blue-500 hover:underline"
                 >
-                  {link}
-                </Link>
-              ))}
-            </div>
-            <a href="#" className="block mt-4 text-blue-500 hover:underline">
-              See more articles
-            </a>
+                  See more articles
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

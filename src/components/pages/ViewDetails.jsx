@@ -13,7 +13,7 @@ const ViewDetails = () => {
   return (
     <>
       <BreadCrumbs />
-      <div className="w-full p-8">
+      <div className="flex w-full p-8">
         <div className="flex flex-col md:flex-row gap-8  items-center">
           {/* Main NFT Image */}
           <div className="w-full">
