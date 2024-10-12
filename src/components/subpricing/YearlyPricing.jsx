@@ -18,23 +18,25 @@ const Quarterly = () => {
           <ul className="mb-6">
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">3-5 day turnaround</span>
+              <span className="text-sm">Post up to 5 art pieces for sale.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Native Development</span>
+              <span className="text-sm">2% commission on each sale.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Task delivered one-by-one</span>
+              <span className="text-sm">
+                Basic analytics (views and clicks).
+              </span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Dedicated dashboard</span>
+              <span className="text-sm">No transaction fee.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Updates via Dashboard & Slack</span>
+              <span className="text-sm">Artist profile page.</span>
             </li>
           </ul>
           <button className="w-full py-2 px-4 rounded-md bg-purple-600 text-white hover:bg-opacity-90 transition duration-300">
@@ -46,8 +48,8 @@ const Quarterly = () => {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h3 className="text-xl font-semibold mb-2">Pro Plus</h3>
           <p className="text-sm text-gray-600 mb-4">
-            Ideal if you want to build or scale your website fast, with full
-            strategy and increased.
+            Ideal if you want to build or scale your Art fast, with full
+            strategy.
           </p>
           <div className="text-3xl font-bold mb-4">
             $79/quarter
@@ -56,31 +58,40 @@ const Quarterly = () => {
           <ul className="mb-6">
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">1-3 day turnaround</span>
+              <span className="text-sm">
+                Post up to 15 art pieces for sale.
+              </span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Monthly strategy call</span>
+              <span className="text-sm">1.5% commission on each sale.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Commercial license</span>
+              <span className="text-sm">
+                Advanced analytics (views, clicks, engagement, and sales
+                tracking).
+              </span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Native Development</span>
+              <span className="text-sm">Priority support.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Tasks delivered one-by-one</span>
+              <span className="text-sm">No transaction fee.</span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Dedicated dashboard</span>
+              <span className="text-sm">
+                Artist profile page with a featured artist badge.
+              </span>
             </li>
             <li className="flex items-center mb-2">
               {/* <Check size={20} className="text-purple-600 mr-2" /> */}
-              <span className="text-sm">Updates via Dashboard & Slack</span>
+              <span className="text-sm">
+                Access to exclusive marketing resources and guides.
+              </span>
             </li>
           </ul>
           <button className="w-full py-2 px-4 rounded-md bg-purple-600 text-white hover:bg-opacity-90 transition duration-300">

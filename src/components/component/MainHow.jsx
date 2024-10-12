@@ -44,7 +44,7 @@ const articles = [
 function MainHow() {
   return (
     <>
-      <div className="flex  w-full">
+      <div className="  w-full">
         <div className="p-8 bg-white">
           <h1 className="text-3xl font-bold mb-6">How it works</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center  gap-8">
