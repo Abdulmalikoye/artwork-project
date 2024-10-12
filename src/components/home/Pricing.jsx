@@ -24,12 +24,12 @@ const PricingPlan = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col gap-3 md:px-32 md:py-12 px-6 py-4 bg-[#1E2238]">
-        <div className="flex flex-col gap-6 md:gap-8  md:py-12 py-6">
+      <div className="flex flex-col gap-3 md:px-32 md:py-12 px-6 py-6 bg-[#1E2238]">
+        <div className="flex flex-col gap-6 md:gap-8   ">
           <h1 className="text-white font-bold md:text-6xl text-3xl text-center w-[90%] animate__animated animate__fadeInDown">
             Choose your right plan!
           </h1>
-          <p className="text-center text-white text-base md:text-lg mb-6">
+          <p className="text-center text-white text-base md:text-lg mb-3 ">
             Select from best plans, ensuring a perfect match. Need more or less?
             Customize your subscription for a seamless fit!
           </p>

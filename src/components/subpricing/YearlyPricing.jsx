@@ -39,7 +39,7 @@ const Quarterly = () => {
               <span className="text-sm">Artist profile page.</span>
             </li>
           </ul>
-          <button className="w-full py-2 px-4 rounded-md bg-purple-600 text-white hover:bg-opacity-90 transition duration-300">
+          <button className="w-full py-2 px-4 rounded-md bg-[#6271EB] text-white hover:bg-opacity-90 transition duration-300">
             Get started
           </button>
         </div>
@@ -94,7 +94,7 @@ const Quarterly = () => {
               </span>
             </li>
           </ul>
-          <button className="w-full py-2 px-4 rounded-md bg-purple-600 text-white hover:bg-opacity-90 transition duration-300">
+          <button className="w-full py-2 px-4 rounded-md bg-[#6271EB] text-white hover:bg-opacity-90 transition duration-300">
             Get started
           </button>
         </div>
