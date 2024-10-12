@@ -18,13 +18,13 @@ const AddUser = ({ closePopup }) => {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50">
-        <div className="bg-white rounded-lg p-8 w-full max-w-lg">
+      <div className="">
+        <div className="bg-white rounded-lg p-8 w-full ">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Add new NFT</h2>
-            <button onClick={closePopup}>
+            <h2 className="text-3xl font-bold mb-3">Add new NFT</h2>
+            {/* <button onClick={closePopup}>
               <ion-icon name="close-outline"></ion-icon>
-            </button>
+            </button> */}
           </div>
           <p className="text-gray-600 mb-6">
             Upload an item
@@ -33,7 +33,7 @@ const AddUser = ({ closePopup }) => {
             tradeoffs.
           </p>
 
-          <div className="border-dashed border-2 border-gray-300 rounded-lg p-4 mb-4 flex justify-center items-center">
+          <div className=" border-dashed border-2 border-gray-300 rounded-lg p-4 mb-4 flex justify-center items-center">
             <div className="text-center">
               <div className="text-4xl mb-2">☁️</div>
               <p className="text-gray-600">Drag your item to upload</p>
@@ -88,7 +88,7 @@ const AddUser = ({ closePopup }) => {
 
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white p-3 rounded-lg font-medium hover:bg-purple-700 transition"
+              className="w-full bg-[#6271EB] text-white p-3 rounded-lg font-medium hover:bg-blue-600 transition"
             >
               Publish
             </button>

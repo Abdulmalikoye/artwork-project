@@ -3,18 +3,20 @@ import ArtCard from "./ArtCard";
 import dashboardImg from "../../img/dashboardimg.svg";
 import FilterComponent from "./FilterComponent";
 import AddUser from "./AddUser";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = () => {
-  const [popup, setPopup] = useState(false);
+  const navigate = useNavigate();
+  // const [popup, setPopup] = useState(false);
 
-  const handlePopup = () => {
-    return setPopup(true);
+  const handleClick = () => {
+    navigate("/dashboard/adduser");
   };
-  const closePopup = () => {
-    return setPopup(false);
-  };
+  // const closePopup = () => {
+  //   return setPopup(false);
+  // };
   return (
-    <main className=" ">
+    <main className="w-full ">
       <div className="dash-img p-10 rounded-lg mx-8 mb-8 ">
         {/* <img src={dashboardImg} alt="" className="w-full h-full" /> */}
         {/* <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div> */}
@@ -34,14 +36,14 @@ const MainContent = () => {
         </div>
       </div>
       <div className="flex items-center justify-between gap-12 px-8 w-full">
-        <FilterComponent handlePopup={handlePopup} />
+        <FilterComponent />
         <button
           className="border border-gray-400 px-4 py-2 rounded"
-          onClick={handlePopup}
+          onClick={handleClick}
         >
           New Art
         </button>
-        {popup && <AddUser closePopup={closePopup} />}
+        {/* {popup && <AddUser closePopup={closePopup} />} */}
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mx-8">
         <ArtCard />

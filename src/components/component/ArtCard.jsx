@@ -1,7 +1,12 @@
 import React from "react";
 import artCard from "../../img/artcard.svg";
+import { useNavigate } from "react-router-dom";
 
 const ArtCard = () => {
+  const navigate = useNavigate();
+  const handlePay = () => {
+    navigate("/dashboard/viewdetails");
+  };
   return (
     <div className=" p-4 rounded-lg art-card md:hover:border-2 md:hover:border-blue-500 border-transparent mt-6">
       <img src={artCard} alt="" className="w-full rounded-lg mb-4" />
@@ -10,7 +15,10 @@ const ArtCard = () => {
       <p className="text-gray-600">By Artist Name</p>
       <div className="flex justify-between items-center mt-4">
         <span className="text-lg font-bold">18.99 ETH</span>
-        <button className="bg-blue-600 text-white py-2 px-4 rounded">
+        <button
+          className="bg-blue-600 text-white py-2 px-4 rounded"
+          onClick={handlePay}
+        >
           Place a Bid
         </button>
       </div>

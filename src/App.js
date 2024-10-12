@@ -17,7 +17,10 @@ import Help from "./components/pages/Help";
 import TroubleShootingPage from "./components/pages/TroubleShootingPage";
 import RootLayout from "./layout/RootLayout";
 import HelpLayout from "./layout/HelpLayout";
+import DashboadLayout from "./layout/DashboardLayout";
 import Error404 from "./components/home/Error404";
+import AddUser from "./components/component/AddUser";
+import ViewDetails from "./components/pages/ViewDetails";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -51,14 +54,18 @@ const App = () => {
               path="dashboard"
               element={
                 <RequireAuth>
-                  <Dashboard
+                  <DashboadLayout
                     isOpen={sidebarOpen}
                     onClose={handleCloseSidebar}
                     onMenuClick={handleMenuClick}
                   />
                 </RequireAuth>
               }
-            />
+            >
+              <Route path="" element={<Dashboard />} />
+              <Route path="adduser" element={<AddUser />} />
+              <Route path="viewdetails" element={<ViewDetails />} />
+            </Route>
             <Route
               path="listing"
               element={
