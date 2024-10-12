@@ -3,7 +3,7 @@ import profileimg from "../../img/profileimg.png";
 
 const WalletContent = () => {
   return (
-    <div className="w-full p-8 bg-white min-h-screen flex md:flex-row flex-col justify-between  gap-8">
+    <div className="w-full px-8 bg-white min-h-screen flex md:flex-row flex-col justify-between  gap-8">
       {/* Wallet Summary Section */}
       <div className="md:w-[70%] flex flex-col gap-10">
         <section>

@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 const ArtCard = () => {
   const navigate = useNavigate();
   const handlePay = () => {
-    navigate("/dashboard/viewdetails");
+    navigate("/listing/viewdetails");
   };
   return (
-    <div className=" p-4 rounded-lg art-card md:hover:border-2 md:hover:border-blue-500 border-transparent mt-6">
+    <div className=" md:hover:scale-105 transition-transform rounded-lg art-card  mt-6">
       <img src={artCard} alt="" className="w-full rounded-lg mb-4" />
 
       <h2 className="text-xl font-semibold my-2">NFT Title</h2>

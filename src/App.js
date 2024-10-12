@@ -18,6 +18,7 @@ import TroubleShootingPage from "./components/pages/TroubleShootingPage";
 import RootLayout from "./layout/RootLayout";
 import HelpLayout from "./layout/HelpLayout";
 import DashboadLayout from "./layout/DashboardLayout";
+import ListingLayout from "./layout/ListingLayout";
 import Error404 from "./components/home/Error404";
 import AddUser from "./components/component/AddUser";
 import ViewDetails from "./components/pages/ViewDetails";
@@ -70,6 +71,22 @@ const App = () => {
               path="listing"
               element={
                 <RequireAuth>
+                  <ListingLayout
+                    isOpen={sidebarOpen}
+                    onClose={handleCloseSidebar}
+                    onMenuClick={handleMenuClick}
+                  />
+                </RequireAuth>
+              }
+            >
+              <Route path="" element={<Listing />} />
+              <Route path="adduser" element={<AddUser />} />
+              <Route path="viewdetails" element={<ViewDetails />} />
+            </Route>
+            {/* <Route
+              path="listing"
+              element={
+                <RequireAuth>
                   <Listing
                     isOpen={sidebarOpen}
                     onClose={handleCloseSidebar}
@@ -77,7 +94,7 @@ const App = () => {
                   />
                 </RequireAuth>
               }
-            />
+            /> */}
             <Route
               path="wallet"
               element={

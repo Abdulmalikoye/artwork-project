@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BreadCrumbs from "./BreadCrumbs";
 
 const AddUser = ({ closePopup }) => {
   const [name, setName] = useState("");
@@ -18,8 +19,9 @@ const AddUser = ({ closePopup }) => {
 
   return (
     <>
+      <BreadCrumbs />
       <div className="">
-        <div className="bg-white rounded-lg p-8 w-full ">
+        <div className="bg-white rounded-lg px-8 w-full ">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-3xl font-bold mb-3">Add new NFT</h2>
             {/* <button onClick={closePopup}>

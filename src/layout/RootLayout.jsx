@@ -17,8 +17,9 @@ const RootLayout = () => {
     "/listing",
     "/help",
     "/help/troubleshooting",
-    "/dashboard/viewdetails",
+    "/listing/viewdetails",
     "/dashboard/adduser",
+    "/listing/adduser",
   ];
   return (
     <>

@@ -10,7 +10,7 @@ const SettingContent = () => {
   return (
     <div className="bg-white rounded-lg min-h-screen min-w-screen  px-8  w-full">
       {/* Header */}
-      <h1 className="text-2xl font-semibold mb-6">Notification</h1>
+      <h1 className="text-3xl font-bold mb-6">Notification</h1>
 
       {/* Mobile Push Notification */}
       <div className="mb-8">
