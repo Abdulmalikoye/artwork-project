@@ -4,6 +4,7 @@ import dashboardImg from "../../img/dashboardimg.svg";
 import FilterComponent from "./FilterComponent";
 import AddUser from "./AddUser";
 import { useNavigate } from "react-router-dom";
+import ArtGallery from "./ArtGallery";
 
 const MainContent = () => {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ const MainContent = () => {
   //   return setPopup(false);
   // };
   return (
-    <main className="w-full ">
-      <div className="dash-img p-8 rounded-lg mx-8 mb-8 ">
+    <main className="w-full px-8">
+      <div className="dash-img p-8 rounded-lg mb-8 ">
         {/* <img src={dashboardImg} alt="" className="w-full h-full" /> */}
         {/* <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-50"></div> */}
         <h1 className="text-3xl text-white font-bold mb-4">
@@ -35,7 +36,7 @@ const MainContent = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-between gap-12 px-8 w-full">
+      <div className="flex items-center justify-between gap-12 w-full">
         <FilterComponent />
         <button
           className="border border-gray-400 px-4 py-2 rounded"
@@ -45,14 +46,7 @@ const MainContent = () => {
         </button>
         {/* {popup && <AddUser closePopup={closePopup} />} */}
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-8 px-8 ">
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-      </div>
+      <ArtGallery />
     </main>
   );
 };

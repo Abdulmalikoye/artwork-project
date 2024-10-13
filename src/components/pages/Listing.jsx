@@ -7,6 +7,7 @@ import FilterComponent from "../component/FilterComponent";
 import ArtCard from "../component/ArtCard";
 import AddUser from "../component/AddUser";
 import { useNavigate } from "react-router-dom";
+import ArtGallery from "../component/ArtGallery";
 
 const Listing = ({ isOpen, onClose, onMenuClick }) => {
   const navigate = useNavigate();
@@ -31,13 +32,13 @@ const Listing = ({ isOpen, onClose, onMenuClick }) => {
           </button>
           {/* {popup && <AddUser closePopup={closePopup} />} */}
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 w-full px-8 ">
+        <div className=" px-8 ">
+          <ArtGallery />
+          {/* <ArtCard />
           <ArtCard />
           <ArtCard />
           <ArtCard />
-          <ArtCard />
-          <ArtCard />
-          <ArtCard />
+          <ArtCard /> */}
         </div>
       </div>
     </>

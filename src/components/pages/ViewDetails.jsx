@@ -1,64 +1,67 @@
-import React, { useState } from "react";
-import artCard from "../../img/artcard.svg";
-import ArtCard from "../component/ArtCard";
-import SuccessPopup from "../component/SuccessPopup";
+// src/components/ViewDetails.js
+import { useLocation, useSearchParams } from "react-router-dom";
+import { useState } from "react";
+
+import ArtGallery from "../component/ArtGallery";
 import BreadCrumbs from "../component/BreadCrumbs";
-import profileImg from "../../img/profileimg.png";
+import SuccessPopup from "../component/SuccessPopup";
 
 const ViewDetails = () => {
+  const [searchParams] = useSearchParams();
   const [pop, setPop] = useState(false);
+
   const handlePop = () => {
     setPop(true);
   };
+
+  // Extracting parameters from the search params
+  const title = searchParams.get("title");
+  const description = searchParams.get("description");
+  const price = searchParams.get("price");
+  const imageUrl = searchParams.get("imageUrl");
   return (
-    // <>
     <div>
       <BreadCrumbs />
-      <div className="flex w-full  p-8">
+      <div className="flex w-full p-8">
         <div className="">
-          <div className="flex flex-col md:flex-row gap-8  items-center">
-            {/* Main NFT Image */}
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            {/* Main Artwork Image */}
             <div className="w-full">
-              <img src={artCard} alt="" className="w-full rounded-lg " />
+              <img src={imageUrl} alt={title} className="w-full rounded-lg" />
             </div>
 
-            {/* NFT Details */}
+            {/* Artwork Details */}
             <div className="w-full">
-              <h1 className="text-3xl font-bold mb-2">Dayco Serpentine Belt</h1>
-              <p className="text-gray-600 mb-4">
-                Open repair of infrarenal aortic aneurysm or dissection, plus
-                repair of associated arterial trauma, following unsuccessful
-                endovascular repair; tube prosthesis...
-              </p>
+              <h1 className="text-3xl font-bold mb-2">{title}</h1>
+              <p className="text-gray-600 mb-4">{description}</p>
 
-              {/* Creator and Owner */}
+              {/* Artist Name */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="flex gap-3 items-center">
-                  <img src={profileImg} alt="" className="w-[52px]" />
+                {/* <div className="flex gap-3 items-center">
+                  <img
+                    src={artwork.artistImage || ""}
+                    alt=""
+                    className="w-[52px]"
+                  />
                   <div>
                     <p className="text-sm text-gray-500">Creator</p>
-                    <p className="font-semibold">Abdulmalik Oyeyemi</p>
+                    <p className="font-semibold">
+                      {artwork.artist || "Unknown"}
+                    </p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
-              {/* Auction Details */}
+              {/* Price Details */}
               <div className="flex justify-between items-center mb-4">
                 <div>
-                  <p className="text-sm text-gray-500">Auction End In</p>
-                  <p className="text-xl font-bold">03 : 12 : 42</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-500">Current Bid</p>
-                  <p className="text-xl font-bold">3.89 ETH</p>
+                  <p className="text-sm text-gray-500">Price</p>
+                  <p className="text-xl font-bold">${price}</p>
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="flex gap-4">
-                <button className="bg-red-100 text-white p-2 rounded-full">
-                  ❤️
-                </button>
                 <button
                   className="flex-grow bg-blue-500 text-white py-2 px-4 rounded-lg"
                   onClick={handlePop}
@@ -75,19 +78,11 @@ const ViewDetails = () => {
             <h2 className="text-2xl font-bold mb-4">
               You may be interested in
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <ArtCard />
-              <ArtCard />
-              <ArtCard />
-              <ArtCard />
-              <ArtCard />
-              <ArtCard />
-            </div>
+            <ArtGallery />
           </div>
         </div>
       </div>
     </div>
-    // </>
   );
 };
 
