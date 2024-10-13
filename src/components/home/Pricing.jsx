@@ -25,7 +25,7 @@ const PricingPlan = () => {
   return (
     <div className="">
       <div className="flex flex-col gap-3 md:px-32 md:py-12 px-6 py-4 bg-[#1E2238]">
-        <div className="flex flex-col gap-6 md:gap-8  md:py-12 py-6">
+        <div className="flex flex-col gap-6 md:gap-8  ">
           <h1 className="text-white font-bold md:text-6xl text-3xl text-center w-[90%] animate__animated animate__fadeInDown">
             Choose your right plan!
           </h1>

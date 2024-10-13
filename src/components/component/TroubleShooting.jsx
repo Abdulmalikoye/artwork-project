@@ -53,11 +53,11 @@ function TroubleShooting() {
 
       {/* Contact Section */}
       <div className="mt-8 p-6 bg-purple-100 rounded-lg flex items-center justify-between">
-        <span className="text-gray-700">
+        <span className="text-gray-700 md:text-lg text-sm">
           Not finding what you need? Find category-specific content in the Help
           Center.
         </span>
-        <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+        <button className="bg-purple-600 text-white md:px-4 px-3 py-2 rounded-lg hover:bg-purple-700">
           Contact us
         </button>
       </div>
