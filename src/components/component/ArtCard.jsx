@@ -1,15 +1,30 @@
 import React from "react";
 import artCard from "../../img/artcard.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ArtCard = ({ title, description, price, imageUrl }) => {
-  const maxWord = 10;
-  const words = description.split(" ");
+  const location = useLocation();
   const navigate = useNavigate();
+  const locationPath = location.pathname.includes("/dashboard")
+    ? "/dashboard"
+    : "/listing";
 
+  const maxWord = 13;
+  const words = description.split(" ");
   const handlePay = () => {
-    // navigate("/listing/viewdetails");
+    navigate(`${locationPath}/viewdetails`, {
+      state: {
+        title,
+        description,
+        price,
+        imageUrl,
+      },
+    });
   };
+
+  // const handlePay = () => {
+  //   navigate("/listing/viewdetails");
+  // };
   return (
     <div className="  rounded-lg art-card  mt-6">
       <div className="overflow-hidden rounded-lg mb-4">
@@ -21,7 +36,7 @@ const ArtCard = ({ title, description, price, imageUrl }) => {
       </div>
 
       <h2 className="text-xl font-semibold my-2">{title}</h2>
-      <p className="text-gray-600">
+      <p className="text-gray-600 md:h-30  lg:20 h-16">
         {words.length > maxWord
           ? words.slice(0, maxWord).join(" ") + "..."
           : description}

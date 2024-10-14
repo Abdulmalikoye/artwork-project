@@ -4,27 +4,29 @@ import MainContent from "./MainContent";
 
 const troubleshootingData = [
   {
-    title: "I should have received NFTs, but I didn’t. How do I claim it?",
+    title:
+      "I purchased art, but it hasn’t appeared in my collection. What should I do?",
     description:
-      "What's better than an NFT? A NFT that's fair. But you didn’t always want to miss 2 of 5 of the same artwork. Unfortunately, it can happen by accident. If you’re confident you qualify but don’t receive any in the weekly drop.",
+      "Sometimes, transactions can take a moment to process. If you're sure you completed your purchase but can't find the artwork in your collection, please check your transaction history or refresh the page.",
     linkText: "See more details",
   },
   {
-    title: "I think I minted duplicate NFTs. Is that even possible?",
+    title:
+      "I think I accidentally bought the same artwork twice. Is that possible?",
     description:
-      "What's better than an NFT? A NFT that's fair. But you don’t always want to mint 2 of 5 of the same artwork. Unfortunately, it can happen by accident. If you’re confident you qualify but don’t receive any in the drop.",
+      "Mistakes can happen! If you believe you’ve made a duplicate purchase, please review your purchase history. If you need further assistance, reach out to our support team.",
     linkText: "See more details",
   },
   {
-    title: "The Marketplace isn’t working properly. Now what?",
+    title: "The platform isn’t functioning properly. What now?",
     description:
-      "Is our site or your profile not loading? Are you having issues when you try to create, buy, or sell NFTs? What about missing prompts and notifications? Try completing the following.",
+      "If our site or your profile isn't loading correctly, or if you're facing issues creating, buying, or selling art, try clearing your cache or using a different browser. If the problem persists, please contact support.",
     linkText: "See more details",
   },
   {
-    title: "I think my NFT disappeared from Marketplace. Why?",
+    title: "Why can’t I find an artwork I previously bought?",
     description:
-      "Don’t worry, Rarible can’t take anything out of your wallet or remove NFTs from any blockchain. Can’t see the artwork on your NFTs? If you’re confident you qualify for but don’t receive any in the weekly drop, please file a request.",
+      "Don’t worry! If an artwork is missing from your collection, it could be a temporary glitch. Ensure your account is connected properly. If you still can’t find it, please submit a support request.",
     linkText: "See more details",
   },
 ];

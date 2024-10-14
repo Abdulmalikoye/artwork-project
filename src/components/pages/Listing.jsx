@@ -25,7 +25,7 @@ const Listing = ({ isOpen, onClose, onMenuClick }) => {
         <div className="flex items-center justify-between gap-12 px-8 w-full">
           <FilterComponent handlePopup={handlePopup} />
           <button
-            className="border border-gray-400 px-4 py-2 rounded"
+            className=" bg-[#6271EB] text-white  px-4 py-2 rounded"
             onClick={handlePopup}
           >
             New Art

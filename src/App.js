@@ -22,6 +22,9 @@ import ListingLayout from "./layout/ListingLayout";
 import Error404 from "./components/home/Error404";
 import AddUser from "./components/component/AddUser";
 import ViewDetails from "./components/pages/ViewDetails";
+import GettingStarted from "./components/component/GettingStarted";
+import MarketPlace from "./components/component/MarketPlace";
+import Safety from "./components/component/Safety";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -136,6 +139,9 @@ const App = () => {
               }
             >
               <Route path="" element={<Help />} />
+              <Route path="getting-started" element={<GettingStarted />} />
+              <Route path="marketplace" element={<MarketPlace />} />
+              <Route path="safety" element={<Safety />} />
               <Route path="troubleshooting" element={<TroubleShootingPage />} />
             </Route>
           </Route>

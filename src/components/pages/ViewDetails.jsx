@@ -1,12 +1,15 @@
 // src/components/ViewDetails.js
 import { useLocation, useSearchParams } from "react-router-dom";
 import { useState } from "react";
+// useLocation;
 
 import ArtGallery from "../component/ArtGallery";
 import BreadCrumbs from "../component/BreadCrumbs";
 import SuccessPopup from "../component/SuccessPopup";
 
 const ViewDetails = () => {
+  const location = useLocation();
+  const { title, description, price, imageUrl } = location.state || {};
   const [searchParams] = useSearchParams();
   const [pop, setPop] = useState(false);
 
@@ -15,10 +18,10 @@ const ViewDetails = () => {
   };
 
   // Extracting parameters from the search params
-  const title = searchParams.get("title");
-  const description = searchParams.get("description");
-  const price = searchParams.get("price");
-  const imageUrl = searchParams.get("imageUrl");
+  // const title = searchParams.get("title");
+  // const description = searchParams.get("description");
+  // const price = searchParams.get("price");
+  // const imageUrl = searchParams.get("imageUrl");
   return (
     <div>
       <BreadCrumbs />
@@ -27,7 +30,11 @@ const ViewDetails = () => {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* Main Artwork Image */}
             <div className="w-full">
-              <img src={imageUrl} alt={title} className="w-full rounded-lg" />
+              <img
+                src={imageUrl}
+                alt={title}
+                className="w-full rounded-lg h-[400px]"
+              />
             </div>
 
             {/* Artwork Details */}

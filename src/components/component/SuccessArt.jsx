@@ -1,7 +1,7 @@
 import React from "react";
 import congrats from "../../img/congrats.svg";
 import { useNavigate } from "react-router-dom";
-const SuccessPopup = ({ setPop }) => {
+const SuccessArt = ({ setPop }) => {
   const navigate = useNavigate();
   const handlClose = () => {
     setPop(false);
@@ -18,12 +18,14 @@ const SuccessPopup = ({ setPop }) => {
         <div className="flex flex-col items-center justify-center">
           <img src={congrats} alt="" />
           <h2 className="text-2xl font-bold mb-2">Congratulations</h2>
-          <p className="text-gray-600 mb-4">You just placed a bid</p>
+          <p className="text-gray-600 mb-4">
+            You just added your art, go to the listing page to view it
+          </p>
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
             onClick={handleClick}
           >
-            Go to Dashboard
+            Go to Listing
           </button>
         </div>
       </div>
@@ -31,4 +33,4 @@ const SuccessPopup = ({ setPop }) => {
   );
 };
 
-export default SuccessPopup;
+export default SuccessArt;

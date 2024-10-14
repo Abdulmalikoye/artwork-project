@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import BreadCrumbs from "./BreadCrumbs";
 // import { useState } from "react";
 import { handleImageUpload, saveImageData } from "../../FirebaseFunctions";
+import SuccessArt from "./SuccessArt";
 
 const AddUser = ({ closePopup }) => {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
+  const [pop, setPop] = useState(false);
 
   // const handleOpen = () => setOpen(true);
   //   const handleClose = () => setOpen(false);
@@ -38,6 +40,7 @@ const AddUser = ({ closePopup }) => {
     } else {
       alert("Please fill in all fields");
     }
+    setPop(true);
   };
 
   return (
@@ -140,6 +143,7 @@ const AddUser = ({ closePopup }) => {
             >
               Publish
             </button>
+            {pop && <SuccessArt />}
           </form>
         </div>
       </div>
