@@ -96,7 +96,7 @@ const Sidebar = ({ isOpen, onClose }) => {
               </p>
             </div>
             <button className="font-bold w-full bg-white text-[#6271EB] py-2 rounded-lg text-sm">
-              Help
+              Go pro
             </button>
           </div>
         </div>

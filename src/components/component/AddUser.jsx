@@ -10,6 +10,7 @@ const AddUser = ({ closePopup }) => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [pop, setPop] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // const handleOpen = () => setOpen(true);
   //   const handleClose = () => setOpen(false);
@@ -40,6 +41,7 @@ const AddUser = ({ closePopup }) => {
     } else {
       alert("Please fill in all fields");
     }
+    setLoading(false);
     setPop(true);
   };
 
@@ -67,9 +69,9 @@ const AddUser = ({ closePopup }) => {
                 <label htmlFor="fileInput">
                   <div className="text-center">
                     <div className="text-4xl mb-2">☁️</div>
-                    <p className="text-gray-600">Drag your item to upload</p>
+                    <p className="text-gray-600">Upload your art</p>
                     <p className="text-gray-400 text-sm">
-                      PNG, GIF, WebP, MP4 or MP3. Maximum file size 100 Mb.
+                      PNG, GIF, WebP, MP4 or MP3. Maximum file size 5 Mb.
                     </p>
                   </div>
                 </label>
@@ -89,7 +91,7 @@ const AddUser = ({ closePopup }) => {
               <input
                 type="text"
                 className="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="e.g. Redeemable T-Shirt with Logo"
+                placeholder="e.g. Female character"
                 id="titleInput"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -136,14 +138,23 @@ const AddUser = ({ closePopup }) => {
                 />
               </div>
             </div>
+            {loading ? (
+              <button
+                type="submit"
+                className="w-full bg-[#6271EB] text-white p-3 rounded-lg font-medium hover:bg-blue-600 transition"
+              >
+                Loading...
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="w-full bg-[#6271EB] text-white p-3 rounded-lg font-medium hover:bg-blue-600 transition"
+              >
+                Publish
+              </button>
+            )}
 
-            <button
-              type="submit"
-              className="w-full bg-[#6271EB] text-white p-3 rounded-lg font-medium hover:bg-blue-600 transition"
-            >
-              Publish
-            </button>
-            {pop && <SuccessArt />}
+            {pop && <SuccessArt setPop={setPop} />}
           </form>
         </div>
       </div>

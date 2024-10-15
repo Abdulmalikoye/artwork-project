@@ -21,10 +21,13 @@ const RootLayout = () => {
     "/dashboard/viewdetails",
     "/dashboard/adduser",
     "/listing/adduser",
+    "/help/getting-started",
+    "/help/marketplace",
+    "/help/safety",
+    // "/help/troubleshooting",
   ];
   return (
     <>
-      {/* Conditionally render the Header based on the current route */}
       {!noHeaderRoutes.includes(location.pathname) && (
         <div className="">
           <Header />

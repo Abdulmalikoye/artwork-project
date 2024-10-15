@@ -34,8 +34,8 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
     </div>
     <div className="grid md:grid-cols-3 gap-8">
       <div className=" bg-[#1E2238]">
-        <div className="rounded-t-md">
-          <img src={cover1} alt="" />
+        <div className="rounded-t-md ">
+          <img src={cover1} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -44,15 +44,15 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
             className=" p-4 rounded-full bg-[#1E2238]"
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+        <div className="flex flex-col items-center justify-center gap-3  py-5 px-7">
+          <h1 className="font-bold text-white text-2xl">Hephective</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
@@ -60,7 +60,7 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
       </div>
       <div className=" bg-[#1E2238]">
         <div className="rounded-t-md">
-          <img src={cover2} alt="" />
+          <img src={cover2} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -70,14 +70,14 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+          <h1 className="font-bold text-white text-2xl">Timmy</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
@@ -85,7 +85,7 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
       </div>
       <div className=" bg-[#1E2238]">
         <div className="rounded-t-md">
-          <img src={cover3} alt="" />
+          <img src={cover3} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -95,14 +95,14 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+          <h1 className="font-bold text-white text-2xl">Kingsley</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
@@ -110,7 +110,7 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
       </div>
       <div className=" bg-[#1E2238]">
         <div className="rounded-t-md">
-          <img src={cover4} alt="" />
+          <img src={cover4} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -120,14 +120,14 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+          <h1 className="font-bold text-white text-2xl">Khalid</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
@@ -135,7 +135,7 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
       </div>
       <div className=" bg-[#1E2238]">
         <div className="rounded-t-md">
-          <img src={cover6} alt="" />
+          <img src={cover6} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -145,14 +145,14 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+          <h1 className="font-bold text-white text-2xl">Fulfilment</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
@@ -160,7 +160,7 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
       </div>
       <div className=" bg-[#1E2238]">
         <div className="rounded-t-md">
-          <img src={cover2} alt="" />
+          <img src={cover2} alt="" className="w-full" />
         </div>
         <div className=" mt-[-10%] flex items-center justify-center">
           <img
@@ -170,14 +170,14 @@ const ArtProfileGallery = ({ imageSrc, name }) => (
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-3  p-5">
-          <h1 className="font-bold text-white text-2xl">Vikash Deep Yadav</h1>
+          <h1 className="font-bold text-white text-2xl">Maleekberry</h1>
           <p className="text-white text-center">
             NFT's are transform the way commerce things.
           </p>
           <Link
             to="/register"
             target="_blank"
-            className="bg-[#6271EB] px-8 py-3 rounded-md text-white"
+            className="border-2 border-white w-full px-8 py-3 rounded-md text-white text-center"
           >
             Follow
           </Link>
