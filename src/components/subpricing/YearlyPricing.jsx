@@ -12,8 +12,8 @@ const Quarterly = () => {
             are seeking assistance to enhance and update it further.
           </p>
           <div className="text-3xl font-bold mb-4">
-            $25/quarter
-            <span className="text-sm font-normal text-gray-600">/month</span>
+            $25
+            <span className="text-sm font-normal text-gray-600">/quarter</span>
           </div>
           <ul className="mb-6">
             <li className="flex items-center mb-2">
@@ -52,8 +52,8 @@ const Quarterly = () => {
             strategy.
           </p>
           <div className="text-3xl font-bold mb-4">
-            $79/quarter
-            <span className="text-sm font-normal text-gray-600">/month</span>
+            $79
+            <span className="text-sm font-normal text-gray-600">/quarter</span>
           </div>
           <ul className="mb-6">
             <li className="flex items-center mb-2">

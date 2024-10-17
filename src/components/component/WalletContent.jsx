@@ -62,10 +62,8 @@ const WalletContent = () => {
                 {/* Example Item Row */}
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">Flower girl</div>
+                    <div className="text-sm text-gray-500">From Abdul</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -78,10 +76,8 @@ const WalletContent = () => {
                 </tr>
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">Serene beach</div>
+                    <div className="text-sm text-gray-500">From Khalid</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -94,10 +90,8 @@ const WalletContent = () => {
                 </tr>
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">The airbender</div>
+                    <div className="text-sm text-gray-500">From Fil</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -110,10 +104,8 @@ const WalletContent = () => {
                 </tr>
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">River bank</div>
+                    <div className="text-sm text-gray-500">From Hephey</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -126,10 +118,8 @@ const WalletContent = () => {
                 </tr>
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">Martial art</div>
+                    <div className="text-sm text-gray-500">From Khalid</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -142,10 +132,8 @@ const WalletContent = () => {
                 </tr>
                 <tr className="border-b">
                   <td className="px-4 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium">Peachy Puch#22</div>
-                    <div className="text-sm text-gray-500">
-                      From Mindblowstudio
-                    </div>
+                    <div className="text-sm font-medium">Marth king</div>
+                    <div className="text-sm text-gray-500">From Bolu</div>
                   </td>
                   <td className="px-4 py-4">
                     <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-100 text-green-800">
@@ -174,28 +162,28 @@ const WalletContent = () => {
               <div class="flex__1">
                 <p class="card__side__name-bank">monobank</p>
                 <div class="card__side__chip"></div>
-                <p class="card__side__name-person">PAVLO MATVIIENKO</p>
+                <p class="card__side__name-person">Powered by WB</p>
               </div>
             </div>
             <div class="card__side card__side_back">
               <div class="card__side__black"></div>
-              <p class="card__side__number">XXXX XXXX XXXX XXXX</p>
+              <p class="card__side__number">3984 8645 9203 2346</p>
               <div class="flex__2">
                 <p class="card__side__other-numbers card__side__other-numbers_1">
-                  XX/XX
+                  12/26
                 </p>
                 <p class="card__side__other-numbers card__side__other-numbers_2">
-                  XXX
+                  574
                 </p>
                 <div class="card__side__photo">
                   <img src={profileimg} alt="" />
                 </div>
                 <div class="card__side__debit"></div>
               </div>
-              <p class="card__side__other-info">
+              {/* <p class="card__side__other-info">
                 MONOBANK.UA | 0 800 205 205 | АТ "УНІВЕРСАЛ БАНК". ЛІЦЕНЗІЯ НБУ
                 №92 ВІД 20.01.1994 | PCE PC100650 WORLD DEBIT
-              </p>
+              </p> */}
             </div>
           </div>
           <div>

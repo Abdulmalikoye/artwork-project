@@ -23,49 +23,51 @@ const PricingPlan = () => {
   };
 
   return (
-    <div className="">
-      <div className="flex flex-col gap-3 md:px-32 md:py-12 px-6 py-4 bg-[#1E2238]">
-        <div className="flex flex-col gap-6 md:gap-8  ">
-          <h1 className="text-white font-bold md:text-6xl text-3xl text-center w-[90%] animate__animated animate__fadeInDown">
-            Choose your right plan!
-          </h1>
-          <p className="text-center text-white text-base md:text-lg mb-3 ">
-            Select from best plans, ensuring a perfect match. Need more or less?
-            Customize your subscription for a seamless fit!
-          </p>
-        </div>
-
-        <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-lg p-3 inline-flex">
-            <Link
-              className={`px-4 py-2 rounded-lg ${
-                billingCycle === "monthly"
-                  ? "bg-[#6271EB] text-white"
-                  : "text-gray-600"
-              }`}
-              onClick={() => setBillingCycle("monthly")}
-              to={getParam("filter", "monthly")}
-            >
-              Monthly
-            </Link>
-            <Link
-              className={`px-4 py-2 rounded-lg ${
-                billingCycle === "quarterly"
-                  ? "bg-[#6271EB] text-white"
-                  : "text-gray-600"
-              }`}
-              onClick={() => setBillingCycle("quarterly")}
-              to={getParam("filter", "quarterly")}
-            >
-              Quarterly (save 10%)
-            </Link>
+    <div className="flex justify-center items-center bg-[#1E2238]">
+      <div>
+        <div className="flex flex-col gap-3 md:px-32 md:py-12 px-6 py-4 ">
+          <div className="flex flex-col gap-6 md:gap-8  ">
+            <h1 className="text-white font-bold md:text-6xl text-3xl text-center w-[90%] animate__animated animate__fadeInDown">
+              Choose your right plan!
+            </h1>
+            <p className="text-center text-white text-base md:text-lg mb-3 ">
+              Select from best plans, ensuring a perfect match. Need more or
+              less? Customize your subscription for a seamless fit!
+            </p>
           </div>
+
+          <div className="flex justify-center mb-8">
+            <div className="bg-white rounded-lg p-3 inline-flex">
+              <Link
+                className={`px-4 py-2 rounded-lg ${
+                  billingCycle === "monthly"
+                    ? "bg-[#6271EB] text-white"
+                    : "text-gray-600"
+                }`}
+                onClick={() => setBillingCycle("monthly")}
+                to={getParam("filter", "monthly")}
+              >
+                Monthly
+              </Link>
+              <Link
+                className={`px-4 py-2 rounded-lg ${
+                  billingCycle === "quarterly"
+                    ? "bg-[#6271EB] text-white"
+                    : "text-gray-600"
+                }`}
+                onClick={() => setBillingCycle("quarterly")}
+                to={getParam("filter", "quarterly")}
+              >
+                Quarterly (save 10%)
+              </Link>
+            </div>
+          </div>
+          {/* Render based on the filter parameter in URL */}
+          {searchParams.get("filter") === "quarterly" && <Quarterly />}
+          {searchParams.get("filter") === "monthly" && <MonthlyPricing />}
         </div>
-        {/* Render based on the filter parameter in URL */}
-        {searchParams.get("filter") === "quarterly" && <Quarterly />}
-        {searchParams.get("filter") === "monthly" && <MonthlyPricing />}
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };

@@ -55,106 +55,108 @@ const Footer = () => {
       </div> */}
 
       {/* Footer */}
-      <footer className="w-full mt-16 md:p-8 p-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-          {/* Marketplace */}
-          <div className="space-y-4">
-            <h4 className="font-bold">Marketplace</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Explore
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Become a Partner
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Platform Status
-                </a>
-              </li>
-            </ul>
+      <footer className="w-full mt-16 md:p-8 p-6 flex items-center justify-center">
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            {/* Marketplace */}
+            <div className="space-y-4">
+              <h4 className="font-bold">Marketplace</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Explore
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Become a Partner
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Platform Status
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Community */}
+            <div className="space-y-4">
+              <h4 className="font-bold">Community</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Favorites
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Watchlist
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    My Collections
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Rankings
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-blue-500">
+                    Activity
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Region */}
+            <div className="space-y-4">
+              <h4 className="font-bold">Region</h4>
+              <p className="text-sm">
+                The world’s first marketplace for collectibles and non-fungible
+                tokens (NFTs) where anything is possible and all are welcome.
+              </p>
+              <select className="px-4 py-2 bg-white text-black rounded-lg">
+                <option>Currency - USD</option>
+                <option>Currency - EUR</option>
+                <option>Currency - GBP</option>
+              </select>
+            </div>
           </div>
 
-          {/* Community */}
-          <div className="space-y-4">
-            <h4 className="font-bold">Community</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Profile
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Favorites
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Watchlist
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  My Collections
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Rankings
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-500">
-                  Activity
-                </a>
-              </li>
-            </ul>
+          {/* Footer links */}
+          <div className="mt-8 flex md:flex-row flex-col items-start justify-between md:items-center border-t border-gray-500 pt-4">
+            <div className="space-x-4">
+              <a href="#" className="hover:text-blue-500">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-blue-500">
+                License
+              </a>
+              <a href="#" className="hover:text-blue-500">
+                API
+              </a>
+            </div>
+            <div className="text-gray-500">&copy; 2021 All rights reserved</div>
           </div>
-
-          {/* Region */}
-          <div className="space-y-4">
-            <h4 className="font-bold">Region</h4>
-            <p className="text-sm">
-              The world’s first marketplace for collectibles and non-fungible
-              tokens (NFTs) where anything is possible and all are welcome.
-            </p>
-            <select className="px-4 py-2 bg-white text-black rounded-lg">
-              <option>Currency - USD</option>
-              <option>Currency - EUR</option>
-              <option>Currency - GBP</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Footer links */}
-        <div className="mt-8 flex md:flex-row flex-col items-start justify-between md:items-center border-t border-gray-500 pt-4">
-          <div className="space-x-4">
-            <a href="#" className="hover:text-blue-500">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              License
-            </a>
-            <a href="#" className="hover:text-blue-500">
-              API
-            </a>
-          </div>
-          <div className="text-gray-500">&copy; 2021 All rights reserved</div>
         </div>
       </footer>
     </section>

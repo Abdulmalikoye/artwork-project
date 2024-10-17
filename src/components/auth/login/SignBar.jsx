@@ -12,13 +12,13 @@ const SignBar = () => {
       <div className="w-[50%] h-screen  md:rounded-l-lg md:p-0 p-4 md:block hidden">
         {/* Background image */}
         <div
-          className="h-full bg-cover bg-center bg-no-repeat bg-[#1E2238] rounded-2xl flex items-center justify-center "
+          className="h-full bg-cover bg-center bg-no-repeat bg-[#1E2238] rounded-2xl flex items-center justify-center relative"
           style={{ backgroundImage: `url(${reactangleImg})` }}
         >
+          <div className="absolute top-20 left-8">
+            <img src={artlogo} alt="" className="inline-block" />
+          </div>
           <div className="  flex flex-col items-start justify-between p-8">
-            <div className=" ">
-              <img src={artlogo} alt="" className="inline-block" />
-            </div>
             <div className=" flex flex-col gap-3  items-start text-white my-5  ">
               <h1 className="font-bold text-5xl  text-left">
                 Ready to Sell Your Art? Start Here!

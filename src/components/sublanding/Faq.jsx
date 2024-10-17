@@ -7,17 +7,19 @@ const Faq = () => {
 
   const faqData = [
     {
-      question: "What is Coca?",
-      answer: "Odio aliquam arcu arcu dictumst justo eu placerat ornare purus.",
-    },
-    {
-      question: "How does it work?",
-      answer: "Our platform works by connecting people across various fields.",
-    },
-    {
-      question: "What are the payment options?",
+      question: "What is Artlab?",
       answer:
-        "We support multiple payment options including credit card and PayPal.",
+        "ArtLab is a vibrant online platform where artists and art enthusiasts connect. It allows you to buy, sell, and showcase unique artworks from talented creators worldwide.",
+    },
+    {
+      question: "How do I get started on ArtLab?",
+      answer:
+        "Getting started is easy! Simply create an account, browse the diverse range of artworks, and start exploring your favorites. Whether you’re an artist or a collector, ArtLab has something for everyone.",
+    },
+    {
+      question: "How do I create a new artwork?",
+      answer:
+        "Creating new artwork on ArtLab is simple! Use our user-friendly tools to upload your pieces, add descriptions, and set your prices. Join our community of artists and share your creativity with the world.",
     },
     {
       question: "Is there a free trial?",
@@ -31,7 +33,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="px-8 md:px-16 py-16 bg-gray-50">
+    <section className="  md:px-32 md:py-12 px-6 py-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
 

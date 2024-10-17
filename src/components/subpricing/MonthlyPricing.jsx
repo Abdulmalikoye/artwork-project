@@ -12,7 +12,7 @@ const MonthlyPricing = () => {
             are seeking assistance to enhance and update it further.
           </p>
           <div className="text-3xl font-bold mb-4">
-            $9/month
+            $9
             <span className="text-sm font-normal text-gray-600">/month</span>
           </div>
           <ul className="mb-6">
@@ -52,7 +52,7 @@ const MonthlyPricing = () => {
             strategy and increased.
           </p>
           <div className="text-3xl font-bold mb-4">
-            $29/month
+            $29
             <span className="text-sm font-normal text-gray-600">/month</span>
           </div>
           <ul className="mb-6">
