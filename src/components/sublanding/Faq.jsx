@@ -38,7 +38,7 @@ const Faq = () => {
         <h1 className="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
 
         {faqData.map((item, index) => (
-          <details
+          <div
             key={index}
             className={`border-b p-4 ${
               isActive === index ? "bg-blue-50" : "bg-white"
@@ -46,18 +46,18 @@ const Faq = () => {
             open={isActive === index} // Set the `open` attribute based on the active state
             onClick={() => toggleQuestion(index)} // Toggle active state on click
           >
-            <summary className="font-bold cursor-pointer flex justify-between items-center text-lg">
+            <div className="font-bold cursor-pointer flex justify-between items-center text-lg">
               {item.question}
               <NavLink className="text-xl">
                 {isActive === index ? "-" : "+"}
               </NavLink>
-            </summary>
+            </div>
             {isActive === index && ( // Conditionally render the answer paragraph
               <p className="mt-2 text-gray-700 text-sm md:text-base">
                 {item.answer}
               </p>
             )}
-          </details>
+          </div>
         ))}
       </div>
     </section>
